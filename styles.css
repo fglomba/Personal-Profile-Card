@@ -62,12 +62,12 @@ animation: loadSkill 2s ease forwards;
 }
 
 .coaching{ --skill-width:90%; }
-.diseno{ --skill-width:75%; }
-.redes{ --skill-width:95%; }
-.comunicacion{ --skill-width:85%; }
+.diseno{ --skill-width:70%; }
+.redes{ --skill-width:80%; }
+.comunicacion{ --skill-width:90%; }
 /* ===== TARJETA DE PERFIL ===== */
 .profile-card {
-    background: #eae3e1;
+    background: var(--card);
     backdrop-filter: blur(10px);
     border-radius: 24px;
     padding: 32px;
@@ -138,7 +138,7 @@ animation: loadSkill 2s ease forwards;
 
 .profile-details p {
     font-size: 16px;
-    color: #666;
+    color: var(--muted);
     font-weight: 400;
 }
 
@@ -149,15 +149,15 @@ animation: loadSkill 2s ease forwards;
     gap: 12px;
     font-size: 20px;
     font-weight: 600;
-    color: #760002;
     margin-bottom: 20px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #d3bf6c;
+    color: var(--bg1);
+border-bottom: 2px solid var(--accent);
 }
 
 .section-title .material-icons {
     font-size: 24px;
-    color: #d3bf6c;
+    color: var(--accent);
 }
 
 /* ===== SECCIÓN DE HABILIDADES ===== */
@@ -203,14 +203,15 @@ animation: loadSkill 2s ease forwards;
 }
 
 .favorite-item {
-    background: #f5f5f5;
     padding: 12px 16px;
     border-radius: 8px;
     font-size: 16px;
-    color: #424242;
+    background: rgba(255,255,255,.65);
+color: var(--ink);
+border-left: 4px solid var(--bg1);
     font-weight: 400;
     transition: all 0.3s ease;
-    border-left: 4px solid #760002;
+    
 }
 
 .favorite-item:hover {
