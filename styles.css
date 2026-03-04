@@ -422,43 +422,7 @@ border-left: 4px solid var(--bg1);
    DARK MODE (opcional)
    OJO: tu diseño es boho claro; esto puede cambiar mucho el look.
    ========================= */
-@media (prefers-color-scheme: dark){
-  .profile-card{
-    background: rgba(30, 30, 30, 0.95);
-    color: #fff;
-  }
 
-  .profile-name{
-    color: #eaeaea;
-  }
-
-  .profile-lastname{
-    color: #c9b37e;
-  }
-
-  .profile-details p{
-    color: rgba(255,255,255,.75);
-  }
-
-  .favorite-item{
-    background: rgba(255,255,255,.08);
-    color: rgba(255,255,255,.92);
-    border-left-color: #c9b37e;
-  }
-
-  .favorite-item:hover{
-    background: rgba(255,255,255,.12);
-  }
-
-  .skill-item{
-    background: rgba(255,255,255,.08);
-    border-color: rgba(255,255,255,.12);
-  }
-
-  .skill-name{
-    color: rgba(255,255,255,.92);
-  }
-}
 
 @keyframes loadSkill{
 from{
