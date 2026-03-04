@@ -242,130 +242,222 @@ animation: loadSkill 2s ease forwards;
 
 /* ===== RESPONSIVE DESIGN ===== */
 /* Para tablets */
-@media (max-width: 768px) {
-    .profile-card {
-        padding: 24px;
-        margin: 10px;
-    }
-    
-    .profile-name {
-        font-size: 24px;
-    }
-    
-    .profile-lastname {
-        font-size: 20px;
-    }
-    
-    .skills-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 12px;
-    }
-    
-    .skill-item {
-        padding: 12px;
-    }
+@media (max-width: 768px){
+  body{
+    padding: 16px;
+  }
+
+  .container{
+    max-width: 520px;
+  }
+
+  .profile-card{
+    padding: 26px;
+    border-radius: 20px;
+  }
+
+  .profile-image{
+    width: 130px;
+    height: 130px;
+  }
+
+  .profile-name{
+    font-size: 26px;
+  }
+
+  .profile-lastname{
+    font-size: 26px; /* antes se te achicaba demasiado */
+  }
+
+  .section-title{
+    font-size: 19px;
+  }
+
+  .skills-container{
+    grid-template-columns: 1fr; /* más prolijo para barras en tablet */
+    gap: 14px;
+  }
+
+  .skill-item{
+    padding: 14px 16px;
+  }
+
+  .favorites-list{
+    gap: 12px;
+  }
+
+  .favorite-item{
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  .footer{
+    font-size: 13px;
+  }
 }
 
-/* Para móviles */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
-    .profile-card {
-        padding: 20px;
-        border-radius: 16px;
-    }
-    
-    .profile-image {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .profile-name {
-        font-size: 22px;
-    }
-    
-    .profile-lastname {
-        font-size: 18px;
-    }
-    
-    .section-title {
-        font-size: 18px;
-    }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    
-    .skill-item {
-        padding: 10px;
-    }
-    
-    .favorite-item {
-        font-size: 14px;
-        padding: 10px 12px;
-    }
+/* Phones */
+@media (max-width: 480px){
+  body{
+    padding: 12px;
+  }
+
+  .container{
+    max-width: 420px;
+  }
+
+  .profile-card{
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .profile-header{
+    margin-bottom: 24px;
+  }
+
+  .profile-image{
+    width: 110px;
+    height: 110px;
+  }
+
+  .profile-name{
+    font-size: 22px;
+  }
+
+  .profile-lastname{
+    font-size: 24px;
+  }
+
+  .profile-details p{
+    font-size: 15px;
+  }
+
+  .section-title{
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .skills-section{
+    margin-bottom: 28px; /* aire entre skills y películas */
+  }
+
+  .skills-container{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .skill-item{
+    padding: 14px 16px;
+    border-radius: 18px; /* más suave */
+  }
+
+  .skill-bar{
+    margin-top: 8px; /* barra más separada del texto */
+  }
+
+  .favorites-section{
+    margin-bottom: 26px;
+  }
+
+  .favorite-item{
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+
+  .footer{
+    font-size: 12px;
+    padding-bottom: 6px;
+  }
 }
 
-/* Para pantallas muy pequeñas */
-@media (max-width: 320px) {
-    .profile-card {
-        padding: 16px;
-    }
-    
-    .profile-image {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .profile-name {
-        font-size: 20px;
-    }
-    
-    .profile-lastname {
-        font-size: 16px;
-    }
+/* Very small phones */
+@media (max-width: 360px){
+  .profile-card{
+    padding: 18px;
+  }
+
+  .profile-image{
+    width: 96px;
+    height: 96px;
+  }
+
+  .profile-name{
+    font-size: 20px;
+  }
+
+  .profile-lastname{
+    font-size: 22px;
+  }
+
+  .favorite-item{
+    font-size: 13px;
+  }
 }
 
-/* ===== MEJORAS DE ACCESIBILIDAD ===== */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+/* Tiny */
+@media (max-width: 320px){
+  .profile-card{
+    padding: 16px;
+  }
+
+  .profile-image{
+    width: 86px;
+    height: 86px;
+  }
 }
 
-/* ===== ESTILOS PARA MODO OSCURO (OPCIONAL) ===== */
-@media (prefers-color-scheme: dark) {
-    .profile-card {
-        background: rgba(30, 30, 30, 0.95);
-        color: #fff;
-    }
-    
-    .profile-name {
-        color: #64b5f6;
-    }
-    
-    .profile-lastname {
-        color: #e0e0e0;
-    }
-    
-    .profile-details p {
-        color: #b0b0b0;
-    }
-    
-    .favorite-item {
-        background: #424242;
-        color: #e0e0e0;
-    }
-    
-    .favorite-item:hover {
-        background: #616161;
-    }
-} 
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================
+   DARK MODE (opcional)
+   OJO: tu diseño es boho claro; esto puede cambiar mucho el look.
+   ========================= */
+@media (prefers-color-scheme: dark){
+  .profile-card{
+    background: rgba(30, 30, 30, 0.95);
+    color: #fff;
+  }
+
+  .profile-name{
+    color: #eaeaea;
+  }
+
+  .profile-lastname{
+    color: #c9b37e;
+  }
+
+  .profile-details p{
+    color: rgba(255,255,255,.75);
+  }
+
+  .favorite-item{
+    background: rgba(255,255,255,.08);
+    color: rgba(255,255,255,.92);
+    border-left-color: #c9b37e;
+  }
+
+  .favorite-item:hover{
+    background: rgba(255,255,255,.12);
+  }
+
+  .skill-item{
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.12);
+  }
+
+  .skill-name{
+    color: rgba(255,255,255,.92);
+  }
+}
 
 @keyframes loadSkill{
 from{
